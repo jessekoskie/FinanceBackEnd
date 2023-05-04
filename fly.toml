@@ -1,0 +1,16 @@
+# fly.toml app configuration file generated for hidden-cherry-8355 on 2023-05-04T19:15:52+03:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = "hidden-cherry-8355"
+primary_region = "arn"
+
+[env]
+  PORT = "8080"
+
+[http_service]
+  internal_port = 8080
+  force_https = true
+  auto_stop_machines = true
+  auto_start_machines = true
