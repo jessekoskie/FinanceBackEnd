@@ -30,6 +30,9 @@ app.use('/product', productRoutes);
 app.use('/transaction', transactionRoutes);
 
 /* MONGOOSE SETUP */
+
+mongoose.set('strictQuery', false); // or true, depending on your preference
+
 const PORT = process.env.PORT || 9000;
 mongoose
   .connect(process.env.MONGO_URL, {
